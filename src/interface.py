@@ -23,5 +23,5 @@ if __name__ == "__main__":
 
     if arquivo_escolhido:
         # Executa o interpretador.py com o arquivo escolhido
-        from interpretador import ler_arquivo
-        ler_arquivo(arquivo_escolhido)
+        from interpretador import main
+        main(arquivo_escolhido)
