@@ -1,0 +1,3 @@
+erros do protocolo jota error:
+200 -> sucesso
+400 -> codigo python foi fornecido no arquivo .jota e não pode ser executado

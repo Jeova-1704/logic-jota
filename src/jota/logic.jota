@@ -1,5 +1,7 @@
 escreva("jeova")
 a = inteiro(recebe("digite um valor: "))
+b = inteiro(recebe("Digite outro valor: "))
+escreva(a + b)
 
 se(a == 1):
     escreva(1)
