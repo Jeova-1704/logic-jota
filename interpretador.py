@@ -1,5 +1,18 @@
+#funçao que abre o arquivo e manda como parametro para a outra função
+def ler_arquivo(caminho_arquivo):
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        codigo_jota = arquivo.read()
+        codigo_python = interpretar_logica_jota(codigo_jota)
+        
+        try:
+            exec(codigo_python)
+        except Exception as e:
+            print(f"Erro na execução: {e}")
+            
+            
+            
+            
 #script para interpretar comandos em "logic.jota" e executar em Python
-
 def interpretar_logica_jota(codigo_jota):
     # Implementa e analisador léxico e sintático aqui (usando ANTLR, PLY, etc.)
     # Converte os comandos para código Python
@@ -23,22 +36,5 @@ def interpretar_logica_jota(codigo_jota):
         codigo_python += linha + '\n'
     print(codigo_python)
     return codigo_python
-
-
-if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) != 2:
-        print("Uso: python interpretador.py <caminho_do_arquivo.jota>")
-        sys.exit(1)
-
-    caminho_arquivo = sys.argv[1]
-
-    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
-        codigo_jota = arquivo.read()
-        codigo_python = interpretar_logica_jota(codigo_jota)
-
-        try:
-            exec(codigo_python)
-        except Exception as e:
-            print(f"Erro na execução: {e}")
+     
+            
