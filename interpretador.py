@@ -24,11 +24,20 @@ def interpretar_logica_jota(codigo_jota):
     print(codigo_python)
     return codigo_python
 
+
 if __name__ == "__main__":
-    with open('logic.jota', 'r', encoding='utf-8') as arquivo:
+    import sys
+
+    if len(sys.argv) != 2:
+        print("Uso: python interpretador.py <caminho_do_arquivo.jota>")
+        sys.exit(1)
+
+    caminho_arquivo = sys.argv[1]
+
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
         codigo_jota = arquivo.read()
         codigo_python = interpretar_logica_jota(codigo_jota)
-        
+
         try:
             exec(codigo_python)
         except Exception as e:
