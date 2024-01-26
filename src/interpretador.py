@@ -8,7 +8,8 @@ MAPEAMENTO = {
     'recebe': 'input',
     'escreva': 'print',
     'se': 'if',
-    'casoNao': 'else',
+    'casoNao': 'elif',
+    'nadaAcima': 'else',
     
     'para': 'for',
     'em': 'in',
