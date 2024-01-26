@@ -20,6 +20,8 @@ def interpretar_logica_jota(codigo_jota):
     mapeamento = {
         'inteiro': 'int',
         'letras': 'str',
+        'real':'float',
+        'logico':'bool',
         'recebe': 'input',
         'escreva': 'print',
         'se': 'if',
