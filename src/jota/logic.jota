@@ -14,3 +14,12 @@ escreva(letras(a))
 escreva(real(2.5))
 escreva(bool(True))
 
+para x em conta(10):
+    escreva(x)
+
+enquanto(True):
+    x += 1
+    se(x == 10):
+        escreva("Quebrou")
+        quebre
+

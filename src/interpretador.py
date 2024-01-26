@@ -1,3 +1,24 @@
+# mapeamento
+MAPEAMENTO = {
+    'inteiro': 'int',
+    'letras': 'str',
+    'real': 'float',
+    'logico': 'bool',
+    
+    'recebe': 'input',
+    'escreva': 'print',
+    'se': 'if',
+    'casoNao': 'else',
+    
+    'para': 'for',
+    'em': 'in',
+    'conta': 'range',
+    'enquanto': 'while',
+    'quebre': 'break',
+    'continue': 'continue'
+}
+
+
 #funçao que abre o arquivo e manda como parametro para a outra função
 def main(caminho_arquivo):
     with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
@@ -12,28 +33,9 @@ def main(caminho_arquivo):
             
 #script para interpretar comandos em "logic.jota" e executar em Python
 def interpretar_logica_jota(codigo_jota):
-
-    # mapeamento
-    mapeamento = {
-        'inteiro': 'int',
-        'letras': 'str',
-        'real': 'float',
-        'logico': 'bool',
-        
-        'recebe': 'input',
-        'escreva': 'print',
-        'se': 'if',
-        'casoNao': 'else',
-        
-        'para': 'for',
-        'enquanto': 'while',
-        'quebre': 'break',
-        'continue': 'continue'
-    }
-
     # Adiciona construções Python específicas que não são permitidas
     construcoes_python_nao_permitidas = ['print', 'input']
-
+    
     codigo_python = ""
     linhas = codigo_jota.split('\n')
 
@@ -43,10 +45,11 @@ def interpretar_logica_jota(codigo_jota):
         if any(construct in linha for construct in construcoes_python_nao_permitidas):
             return None, 400
 
-        for comando, equivalente_python in mapeamento.items():
+        for comando, equivalente_python in MAPEAMENTO.items():
             linha = linha.replace(comando, equivalente_python)
 
         codigo_python += linha + '\n'
+        
         
     print(codigo_python)
     print("=======================================================================")
