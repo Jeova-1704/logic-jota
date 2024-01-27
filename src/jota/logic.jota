@@ -14,7 +14,7 @@ nadaAcima:
 escreva(inteiro(2))
 escreva(letras(a))
 escreva(real(2.5))
-escreva(bool(True))
+escreva(logico(True))
 
 para x em conta(10):
     escreva(x)
