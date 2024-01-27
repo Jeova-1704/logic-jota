@@ -16,7 +16,10 @@ MAPEAMENTO = {
     'conta': 'range',
     'enquanto': 'while',
     'quebre': 'break',
-    'continue': 'continue'
+    'continue': 'continue',
+    
+    'funcao': 'def',
+    'retornar': 'return'
 }
 
 
