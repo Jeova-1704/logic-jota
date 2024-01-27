@@ -1,30 +1,4 @@
-# mapeamento
-MAPEAMENTO = {
-    'inteiro': 'int',
-    'letras': 'str',
-    'real': 'float',
-    'logico': 'bool',
-    
-    'recebe': 'input',
-    'escreva': 'print',
-    'se': 'if',
-    'casoNao': 'elif',
-    'nadaAcima': 'else',
-    
-    'para': 'for',
-    'em': 'in',
-    'conta': 'range',
-    'enquanto': 'while',
-    'quebre': 'break',
-    'continue': 'continue',
-    
-    'funcao': 'def',
-    'retornar': 'return'
-}
-
-CONSTRUCOES_PYTHON_NAO_PERMITIDAS = ['print', 'input', 'int', 'str', 'float', 'bool', 'if', 'elif', 'else', 'for', 'in', 'range', 'while', 'break', 'def', 'return', 'import', 'class']
-
-
+from util.constantes import MAPEAMENTO, CONSTRUCOES_PYTHON_NAO_PERMITIDAS
 
 #funçao que abre o arquivo e manda como parametro para a outra função
 def main(caminho_arquivo):
