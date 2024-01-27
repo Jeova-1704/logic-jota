@@ -21,3 +21,6 @@ MAPEAMENTO = {
     'funcao': 'def',
     'retornar': 'return'
 }
+
+#codigos que não são permitidos ter no .jota
+CONSTRUCOES_PYTHON_NAO_PERMITIDAS = ['print', 'input']

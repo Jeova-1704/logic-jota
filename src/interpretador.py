@@ -1,4 +1,4 @@
-from util.constantes import MAPEAMENTO, CONSTRUCOES_PYTHON_NAO_PERMITIDAS
+from util.constantes import CONSTRUCOES_PYTHON_NAO_PERMITIDAS, MAPEAMENTO
 
 #funçao que abre o arquivo e manda como parametro para a outra função
 def main(caminho_arquivo):
