@@ -1,0 +1,10 @@
+maior = 0
+menor = 0
+
+para i em conta(10):   
+    x = inteiro(recebe())
+    se(x < menor):
+        menor = x
+    se(x > maior):
+        maior = x
+escreva(maior, menor)

@@ -1,0 +1,6 @@
+n = inteiro(recebe())
+para c in conta(n):
+        a = real(recebe())
+        b = real(recebe())
+        c = real(recebe())
+        escreva((a + b + c) / 3)
