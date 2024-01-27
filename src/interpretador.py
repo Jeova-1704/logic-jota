@@ -22,6 +22,9 @@ MAPEAMENTO = {
     'retornar': 'return'
 }
 
+CONSTRUCOES_PYTHON_NAO_PERMITIDAS = ['print', 'input', 'int', 'str', 'float', 'bool', 'if', 'elif', 'else', 'for', 'in', 'range', 'while', 'break', 'def', 'return', 'import', 'class']
+
+
 
 #funçao que abre o arquivo e manda como parametro para a outra função
 def main(caminho_arquivo):
@@ -36,17 +39,14 @@ def main(caminho_arquivo):
             
             
 #script para interpretar comandos em "logic.jota" e executar em Python
-def interpretar_logica_jota(codigo_jota):
-    # Adiciona construções Python específicas que não são permitidas
-    construcoes_python_nao_permitidas = ['print', 'input']
-    
+def interpretar_logica_jota(codigo_jota): 
     codigo_python = ""
     linhas = codigo_jota.split('\n')
 
     for linha in linhas:
 
         # Verifica construções Python não permitidas
-        if any(construct in linha for construct in construcoes_python_nao_permitidas):
+        if any(construct in linha for construct in CONSTRUCOES_PYTHON_NAO_PERMITIDAS):
             return None, 400
 
         for comando, equivalente_python in MAPEAMENTO.items():
