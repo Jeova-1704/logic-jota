@@ -1,4 +1,4 @@
-# mapeia os codigos do projeto para converter em codigo python
+# mapeia os codigos do projeto para converter em codigo
 MAPEAMENTO = {
     'inteiro': 'int',
     'letras': 'str',
@@ -21,6 +21,3 @@ MAPEAMENTO = {
     'funcao': 'def',
     'retornar': 'return'
 }
-
-#codigos que não são permitidos ter no .jota
-CONSTRUCOES_PYTHON_NAO_PERMITIDAS = ['print', 'input', 'int', 'str', 'float', 'bool', 'if', 'elif', 'else', 'for', 'in', 'range', 'while', 'break', 'def', 'return', 'import', 'class']
