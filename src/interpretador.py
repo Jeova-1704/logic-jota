@@ -51,10 +51,6 @@ def interpretar_logica_jota(codigo_jota):
 
         codigo_python += linha + '\n'
         
-        
-    print(codigo_python)
-    print("=======================================================================")
-    print()
     return codigo_python, 200
   
 

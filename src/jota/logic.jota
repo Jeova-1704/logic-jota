@@ -5,8 +5,10 @@ escreva(a + b)
 
 se(a == 1):
     escreva(1)
-casoNao:
-    escreva("Não é o número 1")
+casoNao(a == 2):
+    escreva("A variavel a é 2")
+nadaAcima:
+    escreva("Não é o número 1 e nem 2")
 
 
 escreva(inteiro(2))
